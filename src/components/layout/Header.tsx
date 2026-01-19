@@ -50,6 +50,12 @@ export const Header = () => {
 
           {/* Actions */}
           <div className="flex items-center gap-3">
+            <Link to="/login" className="hidden md:block">
+              <Button variant="outline" size="sm">
+                Login
+              </Button>
+            </Link>
+
             <Link to="/order-online" className="hidden md:block">
               <Button variant="premium" size="sm">
                 Order Online
@@ -109,6 +115,15 @@ export const Header = () => {
                   {link.label}
                 </Link>
               ))}
+              <Link
+                to="/login"
+                onClick={() => setIsMenuOpen(false)}
+                className="mt-2"
+              >
+                <Button variant="outline" className="w-full">
+                  Login
+                </Button>
+              </Link>
               <Link
                 to="/order-online"
                 onClick={() => setIsMenuOpen(false)}
